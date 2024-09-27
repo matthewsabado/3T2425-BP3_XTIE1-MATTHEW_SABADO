@@ -1,8 +1,8 @@
-﻿  GameScene.cpp
-  Player.cpp
-  main.cpp
-C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\main.cpp(7,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\main.cpp(53,12): warning C4244: '=': conversion from 'float' to 'long', possible loss of data
-C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\main.cpp(68,16): warning C4305: '+=': truncation from 'double' to 'float'
-  Generating Code...
-  SDLTemplate.vcxproj -> C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\x64\Debug\SDL-Template.exe
+﻿  Player.cpp
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(78,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(78,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(89,61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(89,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(90,61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(90,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SDLTemplate.vcxproj -> C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\x64\Debug\SDL-Template.exe
