@@ -42,22 +42,22 @@ void Player::update()
 		speed = baseSpeed;
 	}
 
-	if (app.keyboard[SDL_SCANCODE_W]) 
+	if (app.keyboard[SDL_SCANCODE_UP]) 
 	{
 		y -= speed;
 	}
 
-	if (app.keyboard[SDL_SCANCODE_S]) 
+	if (app.keyboard[SDL_SCANCODE_DOWN]) 
 	{
 		y += speed;
 	}
 
-	if (app.keyboard[SDL_SCANCODE_A])
+	if (app.keyboard[SDL_SCANCODE_LEFT])
 	{
 		x -= speed;
 	}
 
-	if (app.keyboard[SDL_SCANCODE_D]) 
+	if (app.keyboard[SDL_SCANCODE_RIGHT]) 
 	{
 		x += speed;
 	}
@@ -115,5 +115,15 @@ void Player::update()
 void Player::draw()
 {
 	blit(texture, x, y);
+}
+
+int Player::getPositionX()
+{
+	return x;
+}
+
+int Player::getPositionY()
+{
+	return y;
 }
 

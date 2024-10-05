@@ -16,6 +16,9 @@ public:
 	void update();
 	void draw();
 	
+	int getPositionX();
+	int getPositionY();
+
 private:
 	int x;
 	int y;
@@ -30,5 +33,6 @@ private:
 	SDL_Texture* texture;
 	Mix_Chunk* sound;
 	vector<Bullet*> bullets;
+
 };
 
