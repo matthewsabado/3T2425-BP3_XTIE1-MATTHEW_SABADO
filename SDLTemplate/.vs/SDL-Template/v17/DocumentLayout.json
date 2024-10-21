@@ -3,43 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\explosion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\explosion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\explosion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\explosion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\SoundManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\SoundManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\VECTOR||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\SoundManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E00E32B-EFB3-4BE5-BABC-ABC949B97CFF}|SDLTemplate\\SDLTemplate.vcxproj|solutionrelative:SDLTemplate\\SoundManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,46 +74,111 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "vector",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
-              "ViewState": "AQIAALQGAAAAAAAAAAAiwMIGAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-10-05T12:18:35.513Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Enemy.h",
               "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Enemy.h",
               "RelativeDocumentMoniker": "SDLTemplate\\Enemy.h",
               "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Enemy.h",
               "RelativeToolTip": "SDLTemplate\\Enemy.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABQAAAAhAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-05T10:34:32.573Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Enemy.cpp",
               "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Enemy.cpp",
               "RelativeDocumentMoniker": "SDLTemplate\\Enemy.cpp",
               "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Enemy.cpp",
               "RelativeToolTip": "SDLTemplate\\Enemy.cpp",
-              "ViewState": "AQIAACgAAAAAAAAAAAAqwDQAAAAnAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAjwG8AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-05T10:38:32.78Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "explosion.cpp",
+              "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\explosion.cpp",
+              "RelativeDocumentMoniker": "SDLTemplate\\explosion.cpp",
+              "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\explosion.cpp",
+              "RelativeToolTip": "SDLTemplate\\explosion.cpp",
+              "ViewState": "AQIAABYAAAAAAAAAAAAjwCQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-21T11:21:24.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "explosion.h",
+              "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\explosion.h",
+              "RelativeDocumentMoniker": "SDLTemplate\\explosion.h",
+              "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\explosion.h",
+              "RelativeToolTip": "SDLTemplate\\explosion.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-21T11:20:07.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Bullet.h",
+              "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Bullet.h",
+              "RelativeDocumentMoniker": "SDLTemplate\\Bullet.h",
+              "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Bullet.h",
+              "RelativeToolTip": "SDLTemplate\\Bullet.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-08T03:52:09.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Scene.h",
+              "RelativeDocumentMoniker": "SDLTemplate\\Scene.h",
+              "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Scene.h",
+              "RelativeToolTip": "SDLTemplate\\Scene.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-08T04:33:03.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Bullet.cpp",
+              "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Bullet.cpp",
+              "RelativeDocumentMoniker": "SDLTemplate\\Bullet.cpp",
+              "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Bullet.cpp",
+              "RelativeToolTip": "SDLTemplate\\Bullet.cpp",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-08T04:15:26.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\main.cpp",
+              "RelativeDocumentMoniker": "SDLTemplate\\main.cpp",
+              "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\main.cpp",
+              "RelativeToolTip": "SDLTemplate\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-08T04:09:41.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "GameObject.h",
               "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameObject.h",
               "RelativeDocumentMoniker": "SDLTemplate\\GameObject.h",
@@ -100,12 +186,11 @@
               "RelativeToolTip": "SDLTemplate\\GameObject.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-27T04:57:45.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-27T04:57:45.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "GameObject.cpp",
               "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameObject.cpp",
               "RelativeDocumentMoniker": "SDLTemplate\\GameObject.cpp",
@@ -113,12 +198,11 @@
               "RelativeToolTip": "SDLTemplate\\GameObject.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-27T04:31:12.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-27T04:31:12.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "SoundManager.cpp",
               "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\SoundManager.cpp",
               "RelativeDocumentMoniker": "SDLTemplate\\SoundManager.cpp",
@@ -126,8 +210,7 @@
               "RelativeToolTip": "SDLTemplate\\SoundManager.cpp",
               "ViewState": "AQIAAAoAAAAAAAAAAAAgwB4AAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-27T04:41:25.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-27T04:41:25.518Z"
             },
             {
               "$type": "Document",
@@ -137,46 +220,46 @@
               "RelativeDocumentMoniker": "SDLTemplate\\GameScene.h",
               "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameScene.h",
               "RelativeToolTip": "SDLTemplate\\GameScene.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAOAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-27T04:33:31.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameScene.cpp",
               "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameScene.cpp",
               "RelativeDocumentMoniker": "SDLTemplate\\GameScene.cpp",
               "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\GameScene.cpp",
               "RelativeToolTip": "SDLTemplate\\GameScene.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAARAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAQwGkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-27T04:29:08.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Player.cpp",
               "RelativeDocumentMoniker": "SDLTemplate\\Player.cpp",
               "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Player.cpp",
               "RelativeToolTip": "SDLTemplate\\Player.cpp",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAgwH4AAAAKAAAA",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAHsAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-27T04:23:54.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Player.h",
               "RelativeDocumentMoniker": "SDLTemplate\\Player.h",
               "ToolTip": "C:\\Users\\Matthew\\Documents\\GitHub\\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\\SDLTemplate\\SDLTemplate\\Player.h",
               "RelativeToolTip": "SDLTemplate\\Player.h",
-              "ViewState": "AQIAAAoAAAAAAAAAAAASwBIAAAACAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAACkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-27T04:20:56.908Z",
               "EditorCaption": ""

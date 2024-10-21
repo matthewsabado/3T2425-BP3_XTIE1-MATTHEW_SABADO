@@ -1,7 +1,2 @@
-﻿  Enemy.cpp
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(24,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(34,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(35,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(60,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(60,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  explosion.cpp
   SDLTemplate.vcxproj -> C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\x64\Debug\SDL-Template.exe

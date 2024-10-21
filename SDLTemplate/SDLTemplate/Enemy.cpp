@@ -7,12 +7,14 @@ Enemy::Enemy()
 
 Enemy::~Enemy()
 {
+	
 }
 
 void Enemy::start()
-{
+{ 
 	//Load Texture
 	texture = loadTexture("gfx/enemy.png");
+	deathFX = loadTexture("gfx/explosion.png");
 
 	directionX = -1;
 	directionY = 1;
@@ -25,8 +27,10 @@ void Enemy::start()
 	currentDirectionChangeTime = 0;
 
 	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
+	SDL_QueryTexture(deathFX, NULL, NULL, &width, &height);
 
 	sound = SoundManager::loadSound("sound/334227__jradcoolness__laser.ogg");
+	sound->volume = 64;
 }
 
 void Enemy::update()
@@ -57,7 +61,7 @@ void Enemy::update()
 
 		calcSlope(playerTarget->getPositionX(), playerTarget->getPositionY(), x, y, &dx, &dy);
 		SoundManager::playSound(sound);
-		Bullet* bullet = new Bullet(x + 3 + width / 2, y - 3 + height / 2, dx, dy, 10);
+		Bullet* bullet = new Bullet(x + 3 + width / 2, y - 3 + height / 2, dx, dy, 10, Side::ENEMY_SIDE);
 		bullets.push_back(bullet);
 		getScene()->addGameObject(bullet);
 		bullet->start();
@@ -70,7 +74,7 @@ void Enemy::update()
 		if (bullets[i]->getPositionX() < 0)
 		{
 			Bullet* bulletErase = bullets[i];
-			bullets.erase(bullets.begin() + 1);
+			bullets.erase(bullets.begin() + i);
 			delete bulletErase;
 
 			break;
@@ -81,6 +85,7 @@ void Enemy::update()
 void Enemy::draw()
 {
 	blit(texture, x, y);
+
 }
 
 void Enemy::setPlayerTarget(Player* player)
@@ -92,4 +97,24 @@ void Enemy::setPosition(int posX, int posY)
 {
 	this->x = posX;
 	this->y = posY;
+}
+
+int Enemy::getPositionX()
+{
+	return this->x;
+}
+
+int Enemy::getPositionY()
+{
+	return this->y;
+}
+
+int Enemy::getWidth()
+{
+	return this->width;
+}
+
+int Enemy::getHeight()
+{
+	return this->height;
 }

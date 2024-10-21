@@ -18,21 +18,32 @@ public:
 	
 	int getPositionX();
 	int getPositionY();
+	int getWidth();
+	int getHeight(); 
+
+	bool getIsAlive();
+	void die();
 
 private:
-	int x;
-	int y;
+	float x;
+	float y;
+	float velocityX;
+	float velocityY;
 	int width;
 	int height;
 	int speed;
 	const int baseSpeed = 3;
+
 	float mainReloadTime;
 	float currentMainReloadTime;
 	float sideReloadTime;
 	float currentSideReloadTime;
+
 	SDL_Texture* texture;
 	Mix_Chunk* sound;
+
 	vector<Bullet*> bullets;
 
+	bool isAlive;
 };
 

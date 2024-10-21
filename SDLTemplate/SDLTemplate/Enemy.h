@@ -20,6 +20,11 @@ public:
 	 void setPlayerTarget(Player* player);
 	 void setPosition(int x, int y);
 
+	 int getPositionX();
+	 int getPositionY();
+	 int getWidth();
+	 int getHeight();
+
 private:
 	int x;
 	int y;
@@ -33,6 +38,7 @@ private:
 	float directionChangeTime;
 	float currentDirectionChangeTime;
 	SDL_Texture* texture;
+	SDL_Texture* deathFX;
 	Mix_Chunk* sound;
 	vector<Bullet*> bullets;
 	Player* playerTarget;

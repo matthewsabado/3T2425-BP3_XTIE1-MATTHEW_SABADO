@@ -25,6 +25,8 @@ void Player::start()
 
 	speed = baseSpeed;
 
+	isAlive = true;
+
 	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
 
 	sound = SoundManager::loadSound("sound/334227__jradcoolness__laser.ogg");
@@ -32,6 +34,20 @@ void Player::start()
 
 void Player::update()
 {
+	for (int i = 0; i < bullets.size(); i++)
+	{
+		if (bullets[i]->getPositionX() > SCREEN_WIDTH)
+		{
+			Bullet* bulletErase = bullets[i];
+			bullets.erase(bullets.begin() + i);
+			delete bulletErase;
+
+			break;
+		}
+	}
+
+	if (!isAlive) return;
+
 	if (app.keyboard[SDL_SCANCODE_LSHIFT])
 	{
 		speed = 5;
@@ -75,7 +91,7 @@ void Player::update()
 	if (app.keyboard[SDL_SCANCODE_F] && currentMainReloadTime == 0) 
 	{
 		SoundManager::playSound(sound);
-		Bullet* bullet = new Bullet(x + 3 + width / 2, y - 3 + height / 2, 1, 0, 10);
+		Bullet* bullet = new Bullet(x + 3 + width / 2, y - 3 + height / 2, 1, 0, 10, Side::PLAYER_SIDE);
 		bullets.push_back(bullet);
 		getScene()->addGameObject(bullet);
 		bullet->start();
@@ -86,8 +102,8 @@ void Player::update()
 	if (app.keyboard[SDL_SCANCODE_G] && currentSideReloadTime == 0)
 	{
 		SoundManager::playSound(sound);
-		Bullet* topBullet = new Bullet(x - 25 + width / 2, y - 30 + height / 2, 1, 0, 10);
-		Bullet* botBullet = new Bullet(x - 25 + width / 2, y + 25 + height / 2, 1, 0, 10);
+		Bullet* topBullet = new Bullet(x - 25 + width / 2, y - 30 + height / 2, 1, 0, 10, Side::PLAYER_SIDE);
+		Bullet* botBullet = new Bullet(x - 25 + width / 2, y + 25 + height / 2, 1, 0, 10, Side::PLAYER_SIDE);
 		bullets.push_back(topBullet);
 		bullets.push_back(botBullet);
 		getScene()->addGameObject(topBullet);
@@ -96,34 +112,46 @@ void Player::update()
 		botBullet->start();
 
 		currentSideReloadTime = sideReloadTime;
-	}
+	 }
 
-	for (int i = 0; i < bullets.size(); i++)
-	{
-		if (bullets[i]->getPositionX() > SCREEN_WIDTH)
-		{
-			Bullet* bulletErase = bullets[i];
-			bullets.erase(bullets.begin() + 1);
-			delete bulletErase;
-
-			break;
-		}
-	}
 }
 
 
 void Player::draw()
 {
+	if (!isAlive) return;
+
 	blit(texture, x, y);
 }
 
 int Player::getPositionX()
 {
-	return x;
+	return this->x;
 }
 
 int Player::getPositionY()
 {
-	return y;
+	return this->y;
 }
+
+int Player::getWidth()
+{
+	return this->width;
+}
+
+int Player::getHeight()
+{
+	return this->height;
+}
+
+bool Player::getIsAlive()
+{
+	return isAlive;
+}
+
+void Player::die()
+{
+	isAlive = false;
+}
+
 
