@@ -27,18 +27,19 @@ void GameScene::start()
 
 	Scene::start();
 
-	points = 0;
+	points = 0; 
 
 	initFonts();
 	// Initialize any scene logic here
 
 	for (int i = 0; i < 3; i++)
 	{
-		spawn();
+		spawnEnemies();
 	}
 
 	SDL_QueryTexture(background, NULL, NULL, &width, &height);
 
+	spawnPowers();
 }
 
 void GameScene::draw()
@@ -63,17 +64,31 @@ void GameScene::update()
 
 	spawnLogic();
 	collisionLogic();
+	
+
 
 }
 
-void GameScene::spawn()
+void GameScene::spawnEnemies()
 {
 	Enemy* enemy = new Enemy();
 	this->addGameObject(enemy);
 	enemy->setPlayerTarget(player);
 
-	enemy->setPosition(1400, 300 + (rand() % 300));
+	enemy->setPosition(200 + (rand() % 500), -200);
 	spawnedEnemies.push_back(enemy);
+
+
+}
+
+void GameScene::spawnPowers()
+{
+	PowerUp* powerup = new PowerUp();
+	this->addGameObject(powerup);
+
+	powerup->setPosition(200 + (rand() % 500), -200);
+	spawnedPowers.push_back(powerup);
+
 }
 
 void GameScene::despawnEnemy(Enemy* enemy)
@@ -103,14 +118,46 @@ void GameScene::explodeEnemy(Enemy* enemy)
 	
 	
 	boom->setPosition(enemy->getPositionX(), enemy->getPositionY());
-	cout << boom->getX();
 	this->addGameObject(boom);
 	
 	
 }
 
+void GameScene::despawnPower(PowerUp* power)
+{
+	int index = -1;
+	for (int i = 0; i < spawnedPowers.size(); i++)
+	{
+		//if the pointer matches
+		if (power == spawnedPowers[i])
+		{
+			index = i;
+			break;
+		}
+	}
+
+	//if match is found
+	if (index != -1)
+	{
+		spawnedPowers.erase(spawnedPowers.begin() + index);
+		delete power;
+	}
+}
+
 void GameScene::spawnLogic()
 {
+	for (int i = 0; i < spawnedEnemies.size(); i++)
+	{
+		if (spawnedEnemies[i]->getPositionY() > SCREEN_HEIGHT + 60)
+		{
+			Enemy* eraseEnemy = spawnedEnemies[i];
+			spawnedEnemies.erase(spawnedEnemies.begin() + i);
+			delete eraseEnemy;
+
+			break;
+		}
+	}
+
 	if (currentSpawnTimer > 0)
 	{
 		currentSpawnTimer--;
@@ -121,11 +168,12 @@ void GameScene::spawnLogic()
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			spawn();
+			spawnEnemies();
 		}
 
 		currentSpawnTimer = spawnTime;
 	}
+	
 }
 
 void GameScene::collisionLogic()
@@ -136,7 +184,26 @@ void GameScene::collisionLogic()
 		//Cast to bullet
 		Bullet* bullet = dynamic_cast<Bullet*>(objects[i]);
 
+		//Cast to power
+		PowerUp* power = dynamic_cast<PowerUp*>(objects[i]);
+
 		//Check if the cast was successful
+
+		if (power != NULL)
+		{
+			int collision = checkCollision(
+				player->getPositionX(), player->getPositionY(), player->getWidth(), player->getHeight(),
+				power->getPositionX(), power->getPositionY(), power->getWidth(), power->getHeight()
+
+			);
+
+			if (collision == 1)
+			{
+				despawnPower(power);
+				break;
+			}
+		}
+	
 		if (bullet != NULL)
 		{
 			//If the bullet is coming from the enemy side, check against the player

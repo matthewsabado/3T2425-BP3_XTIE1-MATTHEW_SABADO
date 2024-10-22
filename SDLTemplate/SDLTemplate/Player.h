@@ -39,6 +39,7 @@ private:
 	float sideReloadTime;
 	float currentSideReloadTime;
 
+	void powerUp1();
 	SDL_Texture* texture;
 	Mix_Chunk* sound;
 

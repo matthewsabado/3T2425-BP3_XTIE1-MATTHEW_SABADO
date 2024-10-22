@@ -1,2 +1,6 @@
-﻿  explosion.cpp
-  SDLTemplate.vcxproj -> C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\x64\Debug\SDL-Template.exe
+﻿  Player.cpp
+C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(114,19): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(114,16): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(119,13): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(124,13): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  SDLTemplate.vcxproj -> C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\x64\Debug\SDL-Template.exe

@@ -5,6 +5,7 @@
 #include "enemy.h"
 #include "text.h"
 #include "explosion.h"
+#include "PowerUp.h"
 #include <vector>
 using namespace std;
 
@@ -27,12 +28,15 @@ private:
 	float spawnTime;
 	float currentSpawnTimer;
 	vector<Enemy*> spawnedEnemies;
+	vector<PowerUp*> spawnedPowers;
 
 	int points;
 
-	void spawn();
+	void spawnEnemies();
+	void spawnPowers();
 	void despawnEnemy(Enemy* enemy);
 	void explodeEnemy(Enemy* enemy);
+	void despawnPower(PowerUp* power);
 
 	void spawnLogic();
 	void collisionLogic();

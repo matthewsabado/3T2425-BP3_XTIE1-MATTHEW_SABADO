@@ -38,7 +38,6 @@ private:
 	float directionChangeTime;
 	float currentDirectionChangeTime;
 	SDL_Texture* texture;
-	SDL_Texture* deathFX;
 	Mix_Chunk* sound;
 	vector<Bullet*> bullets;
 	Player* playerTarget;

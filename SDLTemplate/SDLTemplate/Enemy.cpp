@@ -14,20 +14,18 @@ void Enemy::start()
 { 
 	//Load Texture
 	texture = loadTexture("gfx/enemy.png");
-	deathFX = loadTexture("gfx/explosion.png");
 
-	directionX = -1;
+	directionX = 1;
 	directionY = 1;
 	width = 0;
 	height = 0;
 	speed = 2;
 	reloadTime = 60;
 	currentReloadTime = 0;
-	directionChangeTime = (rand() % 300) + 180; //Direction change every 3-8 seconds
+	directionChangeTime = (rand() % 100) + 100; //Direction change every 3-8 seconds
 	currentDirectionChangeTime = 0;
 
 	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
-	SDL_QueryTexture(deathFX, NULL, NULL, &width, &height);
 
 	sound = SoundManager::loadSound("sound/334227__jradcoolness__laser.ogg");
 	sound->volume = 64;
@@ -38,14 +36,15 @@ void Enemy::update()
 	x += directionX * speed;
 	y += directionY * speed;
 
+	//random movement here
 	if (currentDirectionChangeTime > 0)
 	{
 		currentDirectionChangeTime--;
 	}
 
-	if (currentDirectionChangeTime == 0)
+	if (currentDirectionChangeTime == 0 || x < 0 || x > SCREEN_WIDTH)
 	{
-		directionY = -directionY;
+		directionX = -directionX;
 		currentDirectionChangeTime = directionChangeTime;
 	}
 
@@ -54,7 +53,8 @@ void Enemy::update()
 		currentReloadTime--;
 	}
 
-	if (currentReloadTime == 0 && x < 1175)
+	//alien aiming and firing
+	if (currentReloadTime == 0 && y > 0 && playerTarget->getIsAlive())
 	{
 		float dx = -1;
 		float dy = 0;
@@ -69,9 +69,10 @@ void Enemy::update()
 		currentReloadTime = reloadTime;
 	}
 
+	//memory management
 	for (int i = 0; i < bullets.size(); i++)
 	{
-		if (bullets[i]->getPositionX() < 0)
+		if (bullets[i]->getPositionY() < 0)
 		{
 			Bullet* bulletErase = bullets[i];
 			bullets.erase(bullets.begin() + i);

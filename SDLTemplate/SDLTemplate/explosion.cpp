@@ -8,7 +8,7 @@ void explosion::start()
 	width = 0;
 	height = 0;
 
-	despawnTime = 60;
+	despawnTime = 4;
 
 	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
 
@@ -41,10 +41,5 @@ void explosion::setPosition(int x, int y)
 {
 	 this->x = x;
 	 this->y = y;
-}
-
-int explosion::getX()
-{
-	return this->x;
 }
 

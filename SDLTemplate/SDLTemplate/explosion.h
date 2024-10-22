@@ -12,7 +12,6 @@ public:
 	void update();
 	void draw();
 	void setPosition(int x, int y);
-	int getX();
 
 private:
 	int x;
