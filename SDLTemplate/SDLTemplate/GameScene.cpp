@@ -8,6 +8,7 @@ GameScene::GameScene()
 	this->addGameObject(player);
 
 	currentSpawnTimer = 300;
+	currentPowerSpawnTimer = 500;
 	spawnTime = 300;
 
 }
@@ -28,6 +29,7 @@ void GameScene::start()
 	Scene::start();
 
 	points = 0; 
+	isPowerOnScreen = false;
 
 	initFonts();
 	// Initialize any scene logic here
@@ -39,7 +41,9 @@ void GameScene::start()
 
 	SDL_QueryTexture(background, NULL, NULL, &width, &height);
 
-	spawnPowers();
+	powerSound = SoundManager::loadSound("sound/342749__rhodesmas__notification-01.ogg");
+	powerSound->volume = 10;
+	
 }
 
 void GameScene::draw()
@@ -83,11 +87,11 @@ void GameScene::spawnEnemies()
 
 void GameScene::spawnPowers()
 {
-	PowerUp* powerup = new PowerUp();
-	this->addGameObject(powerup);
+	PowerUp* triShot = new PowerUp();
+	this->addGameObject(triShot);
 
-	powerup->setPosition(200 + (rand() % 500), -200);
-	spawnedPowers.push_back(powerup);
+	triShot->setPosition(200 + (rand() % 500), -200);
+	spawnedPowers.push_back(triShot);
 
 }
 
@@ -123,6 +127,17 @@ void GameScene::explodeEnemy(Enemy* enemy)
 	
 }
 
+void GameScene::explodePlayer()
+{
+	explosion* boom = new explosion();
+
+
+	boom->setPosition(player->getPositionX(), player->getPositionY());
+	this->addGameObject(boom);
+
+
+}
+
 void GameScene::despawnPower(PowerUp* power)
 {
 	int index = -1;
@@ -141,6 +156,7 @@ void GameScene::despawnPower(PowerUp* power)
 	{
 		spawnedPowers.erase(spawnedPowers.begin() + index);
 		delete power;
+		isPowerOnScreen = false;
 	}
 }
 
@@ -174,6 +190,28 @@ void GameScene::spawnLogic()
 		currentSpawnTimer = spawnTime;
 	}
 	
+	if (isPowerOnScreen == false)
+	{
+
+	if (currentPowerSpawnTimer > 0)
+	{
+		currentPowerSpawnTimer--;
+	}
+
+	if (currentPowerSpawnTimer <= 0)
+	{
+		
+
+		for (int i = 0; i < 1; i++)
+		{
+			spawnPowers();
+			
+		}
+		currentPowerSpawnTimer = spawnTime;
+
+		}
+	}
+	
 }
 
 void GameScene::collisionLogic()
@@ -199,7 +237,10 @@ void GameScene::collisionLogic()
 
 			if (collision == 1)
 			{
+				SoundManager::playSound(powerSound);
+				player->poweredUp();
 				despawnPower(power);
+				player->powerUpTime = 300;
 				break;
 			}
 		}
@@ -215,9 +256,11 @@ void GameScene::collisionLogic()
 
 				);
 
-				if (collision == 1)
+				if (collision == 1 && player->getIsAlive())
 				{
+					
 					player->die();
+					explodePlayer();
 					break;
 				}
 			}

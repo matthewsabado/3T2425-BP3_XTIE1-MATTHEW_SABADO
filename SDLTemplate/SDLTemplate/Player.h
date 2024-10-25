@@ -4,6 +4,7 @@
 #include "draw.h"
 #include "SoundManager.h"
 #include "Bullet.h"
+#include "PowerUp.h"
 #include <vector>
 
 using namespace std;
@@ -21,8 +22,16 @@ public:
 	int getWidth();
 	int getHeight(); 
 
+	bool getIsPoweredUp();
+	void poweredUp();
+
 	bool getIsAlive();
 	void die();
+
+	void triShot();
+	void rapidFire();
+
+	float powerUpTime;
 
 private:
 	float x;
@@ -38,13 +47,15 @@ private:
 	float currentMainReloadTime;
 	float sideReloadTime;
 	float currentSideReloadTime;
-
-	void powerUp1();
+	
+	
 	SDL_Texture* texture;
 	Mix_Chunk* sound;
 
 	vector<Bullet*> bullets;
 
 	bool isAlive;
+	bool isPoweredUp;
+
 };
 

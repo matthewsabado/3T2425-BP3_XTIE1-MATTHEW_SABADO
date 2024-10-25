@@ -27,7 +27,10 @@ private:
 	int directionChangeTime;
 	int currentDirectionChangeTime;
 
-	SDL_Texture* texture;
+	int powerId;
+
+	SDL_Texture* triShotTexture;
+	SDL_Texture* rapidShotTexture;
 	Mix_Chunk* sound;
 
 };

@@ -1,6 +1,16 @@
-﻿  Player.cpp
-C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(114,19): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(114,16): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(119,13): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(124,13): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-  SDLTemplate.vcxproj -> C:\Users\12310766\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\x64\Debug\SDL-Template.exe
+﻿  GameScene.cpp
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(255,91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(255,70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(255,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(255,26): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(277,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(277,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(277,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(277,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Player.cpp
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(129,19): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(129,16): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(134,13): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(139,13): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  SDLTemplate.vcxproj -> C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\x64\Debug\SDL-Template.exe

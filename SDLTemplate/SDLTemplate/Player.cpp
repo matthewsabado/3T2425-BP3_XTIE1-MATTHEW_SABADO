@@ -21,11 +21,14 @@ void Player::start()
 	width = 0;
 	height = 0;
 	mainReloadTime = 10;
-	sideReloadTime = 30;
+	sideReloadTime = mainReloadTime;
+
 
 	speed = baseSpeed;
 
 	isAlive = true;
+
+	isPoweredUp = false;
 
 	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
 
@@ -97,12 +100,24 @@ void Player::update()
 		bullet->start();
 
 		currentMainReloadTime = mainReloadTime;
+		
+
+		if (isPoweredUp == true && powerUpTime > 0)
+		{
+			triShot();
+		}
+		
 	}
 
-	if (app.keyboard[SDL_SCANCODE_G] && currentSideReloadTime == 0)
+	if (isPoweredUp == true && powerUpTime > 0)
 	{
-		powerUp1();
-	 }
+		powerUpTime--;
+	}
+
+	if (powerUpTime < 0)
+	{
+		isPoweredUp = false;
+	}
 
 }
 
@@ -134,6 +149,16 @@ int Player::getHeight()
 	return this->height;
 }
 
+bool Player::getIsPoweredUp()
+{
+	return isPoweredUp;
+}
+
+void Player::poweredUp()
+{
+	isPoweredUp = true;
+}
+
 bool Player::getIsAlive()
 {
 	return isAlive;
@@ -144,9 +169,8 @@ void Player::die()
 	isAlive = false;
 }
 
-void Player::powerUp1()
+void Player::triShot()
 {
-
 	SoundManager::playSound(sound);
 	Bullet* leftBullet = new Bullet(x - 25 + width / 2, y - 10 + height / 2, -0.125, -1, 10, Side::PLAYER_SIDE);
 	Bullet* rightBullet = new Bullet(x + 18 + width / 2, y - 10 + height / 2, 0.25, -1, 10, Side::PLAYER_SIDE);
@@ -158,6 +182,12 @@ void Player::powerUp1()
 	rightBullet->start();
 
 	currentSideReloadTime = sideReloadTime;
+
+}
+
+void Player::rapidFire()
+{
+	currentMainReloadTime = 7;
 }
 
 

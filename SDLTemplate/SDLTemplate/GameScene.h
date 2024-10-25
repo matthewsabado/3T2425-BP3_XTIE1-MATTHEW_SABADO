@@ -27,15 +27,19 @@ private:
 	//enemy spawning
 	float spawnTime;
 	float currentSpawnTimer;
+	float currentPowerSpawnTimer;
 	vector<Enemy*> spawnedEnemies;
 	vector<PowerUp*> spawnedPowers;
+	Mix_Chunk* powerSound;
 
 	int points;
+	bool isPowerOnScreen;
 
 	void spawnEnemies();
 	void spawnPowers();
 	void despawnEnemy(Enemy* enemy);
 	void explodeEnemy(Enemy* enemy);
+	void explodePlayer();
 	void despawnPower(PowerUp* power);
 
 	void spawnLogic();
