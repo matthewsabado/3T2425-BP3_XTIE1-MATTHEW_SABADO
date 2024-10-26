@@ -23,7 +23,7 @@ public:
 	int getHeight(); 
 
 	bool getIsPoweredUp();
-	void poweredUp();
+	void poweredUp(int powerUp);
 
 	bool getIsAlive();
 	void die();
@@ -42,6 +42,7 @@ private:
 	int height;
 	int speed;
 	const int baseSpeed = 3;
+	int activePowerID = 0;
 
 	float mainReloadTime;
 	float currentMainReloadTime;

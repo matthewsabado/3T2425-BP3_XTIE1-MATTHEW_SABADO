@@ -11,6 +11,7 @@ Player::~Player()
 	bullets.clear();
 }
 
+
 void Player::start()
 {
 	//Load Texture
@@ -22,7 +23,6 @@ void Player::start()
 	height = 0;
 	mainReloadTime = 10;
 	sideReloadTime = mainReloadTime;
-
 
 	speed = baseSpeed;
 
@@ -37,6 +37,7 @@ void Player::start()
 
 void Player::update()
 {
+	//bullet memory management
 	for (int i = 0; i < bullets.size(); i++)
 	{
 		if (bullets[i]->getPositionY() < 0)
@@ -93,6 +94,8 @@ void Player::update()
 
 	if (app.keyboard[SDL_SCANCODE_F] && currentMainReloadTime == 0) 
 	{
+		
+		
 		SoundManager::playSound(sound);
 		Bullet* bullet = new Bullet(x - 5 + width / 2, y - 20 + height / 2, 0, -1, 10, Side::PLAYER_SIDE);
 		bullets.push_back(bullet);
@@ -100,13 +103,16 @@ void Player::update()
 		bullet->start();
 
 		currentMainReloadTime = mainReloadTime;
-		
 
-		if (isPoweredUp == true && powerUpTime > 0)
+		if (isPoweredUp == true && powerUpTime > 0 && activePowerID == 1)
 		{
 			triShot();
 		}
 		
+		if (isPoweredUp == true && powerUpTime > 0 && activePowerID == 2)
+		{
+			rapidFire();
+		}
 	}
 
 	if (isPoweredUp == true && powerUpTime > 0)
@@ -154,9 +160,11 @@ bool Player::getIsPoweredUp()
 	return isPoweredUp;
 }
 
-void Player::poweredUp()
+void Player::poweredUp(int powerID)
 {
 	isPoweredUp = true;
+	activePowerID = powerID;
+
 }
 
 bool Player::getIsAlive()

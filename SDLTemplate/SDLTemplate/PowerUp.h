@@ -15,6 +15,10 @@ public:
 	int getWidth();
 	int getHeight();
 
+	int getPowerID();
+	int powerID;
+	
+
 private:
 
 	int x;
@@ -26,11 +30,10 @@ private:
 	int speed;
 	int directionChangeTime;
 	int currentDirectionChangeTime;
+	
+	
 
-	int powerId;
-
-	SDL_Texture* triShotTexture;
-	SDL_Texture* rapidShotTexture;
+	SDL_Texture* texture;
 	Mix_Chunk* sound;
 
 };

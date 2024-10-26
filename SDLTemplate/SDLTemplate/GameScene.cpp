@@ -8,7 +8,8 @@ GameScene::GameScene()
 	this->addGameObject(player);
 
 	currentSpawnTimer = 300;
-	currentPowerSpawnTimer = 500;
+	powerSpawnTime = 1000;
+	currentPowerSpawnTimer = 1000;
 	spawnTime = 300;
 
 }
@@ -39,11 +40,14 @@ void GameScene::start()
 		spawnEnemies();
 	}
 
+
 	SDL_QueryTexture(background, NULL, NULL, &width, &height);
 
-	powerSound = SoundManager::loadSound("sound/342749__rhodesmas__notification-01.ogg");
-	powerSound->volume = 10;
-	
+	trishotSound = SoundManager::loadSound("sound/342749__rhodesmas__notification-01.ogg");
+	trishotSound->volume = 10;
+	rapidSound = SoundManager::loadSound("sound/rapidfire_sfx.ogg");
+
+
 }
 
 void GameScene::draw()
@@ -53,6 +57,7 @@ void GameScene::draw()
 
 	Scene::draw();
 
+	
 	drawText(110, 20, 255, 255, 255, TEXT_CENTER, "POINTS: %03d", points);
 
 	if (!player->getIsAlive())
@@ -65,6 +70,15 @@ void GameScene::draw()
 void GameScene::update()
 {
 	Scene::update();
+	if (points >= 10)
+	{
+		spawnTime = 200;
+	}
+
+	if (points >= 20)
+	{
+		spawnTime = 100;
+	}
 
 	spawnLogic();
 	collisionLogic();
@@ -87,12 +101,17 @@ void GameScene::spawnEnemies()
 
 void GameScene::spawnPowers()
 {
-	PowerUp* triShot = new PowerUp();
-	this->addGameObject(triShot);
+	PowerUp* power = new PowerUp();
+	power->powerID = rand() % 2 + 1;
 
-	triShot->setPosition(200 + (rand() % 500), -200);
-	spawnedPowers.push_back(triShot);
+	power->start();
 
+	this->addGameObject(power);
+
+	power->setPosition(200 + (rand() % 500), -200);
+	spawnedPowers.push_back(power);
+
+	
 }
 
 void GameScene::despawnEnemy(Enemy* enemy)
@@ -141,14 +160,16 @@ void GameScene::explodePlayer()
 void GameScene::despawnPower(PowerUp* power)
 {
 	int index = -1;
+	
 	for (int i = 0; i < spawnedPowers.size(); i++)
 	{
 		//if the pointer matches
 		if (power == spawnedPowers[i])
-		{
-			index = i;
-			break;
-		}
+			{
+				index = i;
+				break;
+
+			}
 	}
 
 	//if match is found
@@ -162,6 +183,7 @@ void GameScene::despawnPower(PowerUp* power)
 
 void GameScene::spawnLogic()
 {
+	//enemy memory management
 	for (int i = 0; i < spawnedEnemies.size(); i++)
 	{
 		if (spawnedEnemies[i]->getPositionY() > SCREEN_HEIGHT + 60)
@@ -190,9 +212,7 @@ void GameScene::spawnLogic()
 		currentSpawnTimer = spawnTime;
 	}
 	
-	if (isPowerOnScreen == false)
-	{
-
+	
 	if (currentPowerSpawnTimer > 0)
 	{
 		currentPowerSpawnTimer--;
@@ -207,10 +227,10 @@ void GameScene::spawnLogic()
 			spawnPowers();
 			
 		}
-		currentPowerSpawnTimer = spawnTime;
+		
+		currentPowerSpawnTimer = powerSpawnTime;
 
 		}
-	}
 	
 }
 
@@ -237,8 +257,18 @@ void GameScene::collisionLogic()
 
 			if (collision == 1)
 			{
-				SoundManager::playSound(powerSound);
-				player->poweredUp();
+				if (power->powerID == 1)
+				{
+					SoundManager::playSound(trishotSound);
+
+				}
+
+				if (power->powerID == 2)
+				{
+					SoundManager::playSound(rapidSound);
+				}
+
+				player->poweredUp(power->getPowerID());
 				despawnPower(power);
 				player->powerUpTime = 300;
 				break;
@@ -280,8 +310,10 @@ void GameScene::collisionLogic()
 
 					if (collision == 1)
 					{
+						
 						explodeEnemy(currentEnemy);
 						despawnEnemy(currentEnemy);
+						
 						points++;
 
 						break;

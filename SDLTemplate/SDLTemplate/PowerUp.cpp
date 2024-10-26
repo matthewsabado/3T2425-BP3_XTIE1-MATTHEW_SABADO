@@ -3,19 +3,19 @@
 
 void PowerUp::start()
 {
-	if (powerId == 1) {
 
-	
-
+	//loading trishot texture
+	if (powerID == 1)
+	{
+		texture = loadTexture("gfx/points.png");
 	}
 
-	if (powerId == 2) {
+	//loading rapidshot texture
 
-	rapidShotTexture = loadTexture("gfx/rapidshot.png");
-
+	else if (powerID == 2)
+	{
+		texture = loadTexture("gfx/rapidfire.png");
 	}
-
-	triShotTexture = loadTexture("gfx/points.png");
 
 	directionX = 1;
 	directionY = 1;
@@ -26,8 +26,7 @@ void PowerUp::start()
 	directionChangeTime = (rand() % 100) + 10; //Direction change every 3-8 seconds
 	currentDirectionChangeTime = 0;
 
-	SDL_QueryTexture(triShotTexture, NULL, NULL, &width, &height);
-	SDL_QueryTexture(rapidShotTexture, NULL, NULL, &width, &height);
+	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
 
 }
 
@@ -35,7 +34,6 @@ void PowerUp::update()
 {
 	x += directionX * speed;
 	y += directionY * speed;
-
 
 	//random movement here
 	if (currentDirectionChangeTime > 0)
@@ -53,8 +51,8 @@ void PowerUp::update()
 
 void PowerUp::draw()
 {
-	blit(triShotTexture, x, y);
-	blit(rapidShotTexture, x, y);
+	
+	blit(texture, x, y);
 }
 
 void PowerUp::setPosition(int x, int y)
@@ -83,6 +81,12 @@ int PowerUp::getHeight()
 {
 	return this->height;
 }
+
+int PowerUp::getPowerID()
+{
+	return this->powerID;
+}
+
 
 
 
