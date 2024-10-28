@@ -6,6 +6,7 @@
 #include "text.h"
 #include "explosion.h"
 #include "PowerUp.h"
+#include "Boss.h"
 #include <vector>
 using namespace std;
 
@@ -38,9 +39,14 @@ private:
 	bool isPowerOnScreen;
 	int powerSpawnTime;
 	float currentPowerSpawnTimer;
+	int textTimer;
+
+	bool isBossOnScreen;
 
 	void spawnEnemies();
 	void spawnPowers();
+	void spawnBoss();
+	void despawnBoss();
 	void despawnEnemy(Enemy* enemy);
 	void explodeEnemy(Enemy* enemy);
 	void explodePlayer();

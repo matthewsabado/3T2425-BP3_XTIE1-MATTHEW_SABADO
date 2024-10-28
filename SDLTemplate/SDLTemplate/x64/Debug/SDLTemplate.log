@@ -1,28 +1,11 @@
-﻿  Enemy.cpp
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(25,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(36,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(37,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(64,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Enemy.cpp(64,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  GameScene.cpp
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(231,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(285,91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(285,70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(285,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(285,26): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(307,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(307,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(307,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(307,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  main.cpp
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\main.cpp(7,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\main.cpp(53,12): warning C4244: '=': conversion from 'float' to 'long', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\main.cpp(68,21): warning C4305: '+=': truncation from 'double' to 'float'
-  Player.cpp
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(135,19): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(135,16): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(140,13): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\Player.cpp(145,13): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-  PowerUp.cpp
-  Generating Code...
+﻿  GameScene.cpp
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(262,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(316,91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(316,70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(316,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(316,26): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(338,92): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(338,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(338,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\SDLTemplate\GameScene.cpp(338,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   SDLTemplate.vcxproj -> C:\Users\Matthew\Documents\GitHub\SY2425T1_BASPRG3_XTIE1_SABADO_MATTHEW\SDLTemplate\x64\Debug\SDL-Template.exe

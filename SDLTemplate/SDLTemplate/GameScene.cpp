@@ -31,6 +31,8 @@ void GameScene::start()
 
 	points = 0; 
 	isPowerOnScreen = false;
+	isBossOnScreen = false;
+	textTimer = 100;
 
 	initFonts();
 	// Initialize any scene logic here
@@ -60,6 +62,12 @@ void GameScene::draw()
 	
 	drawText(110, 20, 255, 255, 255, TEXT_CENTER, "POINTS: %03d", points);
 
+	if (isBossOnScreen == true && textTimer > 0)
+	{
+		drawText(SCREEN_WIDTH / 2, 600, 255, 0, 0, TEXT_CENTER, "BOSS APPROACHING!");
+		textTimer--;
+	}
+
 	if (!player->getIsAlive())
 	{
 		drawText(SCREEN_WIDTH / 2, 600, 255, 0, 0, TEXT_CENTER, "GAME OVER!");
@@ -84,7 +92,6 @@ void GameScene::update()
 	collisionLogic();
 	
 
-
 }
 
 void GameScene::spawnEnemies()
@@ -96,7 +103,7 @@ void GameScene::spawnEnemies()
 	enemy->setPosition(200 + (rand() % 500), -200);
 	spawnedEnemies.push_back(enemy);
 
-
+	
 }
 
 void GameScene::spawnPowers()
@@ -111,6 +118,21 @@ void GameScene::spawnPowers()
 	power->setPosition(200 + (rand() % 500), -200);
 	spawnedPowers.push_back(power);
 
+	
+}
+
+void GameScene::spawnBoss()
+{
+	Boss* boss = new Boss();
+	this->addGameObject(boss);
+	boss->setPlayerTarget(player);
+
+	boss->setPosition(350, -200);
+
+}
+
+void GameScene::despawnBoss()
+{
 	
 }
 
@@ -196,20 +218,29 @@ void GameScene::spawnLogic()
 		}
 	}
 
-	if (currentSpawnTimer > 0)
+	if (points < 40 && isBossOnScreen == false)
 	{
-		currentSpawnTimer--;
-
-	}
-
-	if (currentSpawnTimer <= 0)
-	{
-		for (int i = 0; i < 3; i++)
+		if (currentSpawnTimer > 0)
 		{
-			spawnEnemies();
+			currentSpawnTimer--;
+
 		}
 
-		currentSpawnTimer = spawnTime;
+		if (currentSpawnTimer <= 0)
+		{
+			for (int i = 0; i < 3; i++)
+			{
+				spawnEnemies();
+			}
+
+			currentSpawnTimer = spawnTime;
+		}
+	}
+	
+	if (points >= 20 && isBossOnScreen == false)
+	{
+		isBossOnScreen = true;
+		spawnBoss();
 	}
 	
 	
