@@ -50,6 +50,7 @@ void Player::update()
 		}
 	}
 
+	//controls for player
 	if (!isAlive) return;
 
 	if (app.keyboard[SDL_SCANCODE_LSHIFT])
@@ -104,6 +105,7 @@ void Player::update()
 
 		currentMainReloadTime = mainReloadTime;
 
+		//powerup logic
 		if (isPoweredUp == true && powerUpTime > 0 && activePowerID == 1)
 		{
 			triShot();
@@ -115,6 +117,7 @@ void Player::update()
 		}
 	}
 
+	//powerup timer
 	if (isPoweredUp == true && powerUpTime > 0)
 	{
 		powerUpTime--;
@@ -177,6 +180,7 @@ void Player::die()
 	isAlive = false;
 }
 
+//powerups
 void Player::triShot()
 {
 	SoundManager::playSound(sound);

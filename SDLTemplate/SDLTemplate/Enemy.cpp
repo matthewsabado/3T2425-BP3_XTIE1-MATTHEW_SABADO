@@ -42,6 +42,7 @@ void Enemy::update()
 		currentDirectionChangeTime--;
 	}
 
+	//make sure enemies bounce on the sides of the screen
 	if (currentDirectionChangeTime == 0 || x < 0 || x > SCREEN_WIDTH)
 	{
 		directionX = -directionX;

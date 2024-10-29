@@ -23,7 +23,7 @@ void PowerUp::start()
 	width = 0;
 	height = 0;
 
-	directionChangeTime = (rand() % 100) + 10; //Direction change every 3-8 seconds
+	directionChangeTime = (rand() % 100) + 10; //random direction changing
 	currentDirectionChangeTime = 0;
 
 	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
@@ -41,6 +41,7 @@ void PowerUp::update()
 		currentDirectionChangeTime--;
 	}
 
+	//make sure powerups bounce on the sides of the screen
 	if (currentDirectionChangeTime == 0 || x < 0 || x > SCREEN_WIDTH)
 	{
 		directionX = -directionX;

@@ -29,10 +29,10 @@ void GameScene::start()
 
 	Scene::start();
 
-	points = 0; 
+	points = 17; 
 	isPowerOnScreen = false;
 	isBossOnScreen = false;
-	textTimer = 100;
+
 
 	initFonts();
 	// Initialize any scene logic here
@@ -49,7 +49,6 @@ void GameScene::start()
 	trishotSound->volume = 10;
 	rapidSound = SoundManager::loadSound("sound/rapidfire_sfx.ogg");
 
-
 }
 
 void GameScene::draw()
@@ -62,21 +61,20 @@ void GameScene::draw()
 	
 	drawText(110, 20, 255, 255, 255, TEXT_CENTER, "POINTS: %03d", points);
 
-	if (isBossOnScreen == true && textTimer > 0)
-	{
-		drawText(SCREEN_WIDTH / 2, 600, 255, 0, 0, TEXT_CENTER, "BOSS APPROACHING!");
-		textTimer--;
-	}
-
 	if (!player->getIsAlive())
 	{
 		drawText(SCREEN_WIDTH / 2, 600, 255, 0, 0, TEXT_CENTER, "GAME OVER!");
 	}
 
+	if (isBossOnScreen == true)
+	{
+		drawText(150, 45, 255, 255, 255, TEXT_CENTER, "BOSS HP: %01d", spawnedBosses[0]->getBossHP());
+	}
 }
 
 void GameScene::update()
 {
+
 	Scene::update();
 	if (points >= 10)
 	{
@@ -123,11 +121,13 @@ void GameScene::spawnPowers()
 
 void GameScene::spawnBoss()
 {
+	//spawning boss function
 	Boss* boss = new Boss();
 	this->addGameObject(boss);
 	boss->setPlayerTarget(player);
 
-	boss->setPosition(350, -200);
+	boss->setPosition(250, 40);
+	spawnedBosses.push_back(boss);
 
 }
 
@@ -138,6 +138,7 @@ void GameScene::despawnBoss()
 
 void GameScene::despawnEnemy(Enemy* enemy)
 {
+
 	int index = -1;
 	for (int i = 0; i < spawnedEnemies.size(); i++)
 	{
@@ -161,7 +162,7 @@ void GameScene::explodeEnemy(Enemy* enemy)
 {
 	explosion* boom = new explosion();
 	
-	
+	//finds position of the enemy
 	boom->setPosition(enemy->getPositionX(), enemy->getPositionY());
 	this->addGameObject(boom);
 	
@@ -172,7 +173,7 @@ void GameScene::explodePlayer()
 {
 	explosion* boom = new explosion();
 
-
+	//finds position of the player
 	boom->setPosition(player->getPositionX(), player->getPositionY());
 	this->addGameObject(boom);
 
@@ -218,7 +219,8 @@ void GameScene::spawnLogic()
 		}
 	}
 
-	if (points < 40 && isBossOnScreen == false)
+	//spawning logic to stop spawning enemies when boss is on screen
+	if (isBossOnScreen == false)
 	{
 		if (currentSpawnTimer > 0)
 		{
@@ -237,13 +239,14 @@ void GameScene::spawnLogic()
 		}
 	}
 	
+	//spawning boss logic
 	if (points >= 20 && isBossOnScreen == false)
 	{
 		isBossOnScreen = true;
 		spawnBoss();
 	}
 	
-	
+	//powerspawn timer logic
 	if (currentPowerSpawnTimer > 0)
 	{
 		currentPowerSpawnTimer--;
@@ -276,6 +279,9 @@ void GameScene::collisionLogic()
 		//Cast to power
 		PowerUp* power = dynamic_cast<PowerUp*>(objects[i]);
 
+		//Cast to boss
+		Boss* boss = dynamic_cast<Boss*>(objects[i]);
+
 		//Check if the cast was successful
 
 		if (power != NULL)
@@ -286,6 +292,7 @@ void GameScene::collisionLogic()
 
 			);
 
+			//ID 1 trishot powerup, ID 2 rapidfire powerup
 			if (collision == 1)
 			{
 				if (power->powerID == 1)
@@ -319,7 +326,6 @@ void GameScene::collisionLogic()
 
 				if (collision == 1 && player->getIsAlive())
 				{
-					
 					player->die();
 					explodePlayer();
 					break;
@@ -341,11 +347,32 @@ void GameScene::collisionLogic()
 
 					if (collision == 1)
 					{
-						
 						explodeEnemy(currentEnemy);
 						despawnEnemy(currentEnemy);
 						
 						points++;
+
+						break;
+					}
+				}
+			}
+
+			//If the bullet is coming from the player side, check against the boss
+			else if (bullet->getSide() == Side::PLAYER_SIDE)
+			{
+				for (int i = 0; i < spawnedBosses.size(); i++)
+				{
+					Boss* currentBoss = spawnedBosses[i];
+
+					int collision = checkCollision(
+						currentBoss->getPositionX(), currentBoss->getPositionY(), currentBoss->getWidth(), currentBoss->getHeight(),
+						bullet->getPositionX(), bullet->getPositionY(), bullet->getWidth(), bullet->getHeight()
+
+					);
+
+					if (collision == 1)
+					{
+						currentBoss->takeDamage();
 
 						break;
 					}

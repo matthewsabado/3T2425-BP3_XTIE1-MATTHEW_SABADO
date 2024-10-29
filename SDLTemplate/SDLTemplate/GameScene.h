@@ -31,6 +31,7 @@ private:
 	
 	vector<Enemy*> spawnedEnemies;
 	vector<PowerUp*> spawnedPowers;
+	vector<Boss*> spawnedBosses;
 	Mix_Chunk* trishotSound;
 	Mix_Chunk* rapidSound;
 
@@ -39,12 +40,13 @@ private:
 	bool isPowerOnScreen;
 	int powerSpawnTime;
 	float currentPowerSpawnTimer;
-	int textTimer;
+
 
 	bool isBossOnScreen;
 
 	void spawnEnemies();
 	void spawnPowers();
+
 	void spawnBoss();
 	void despawnBoss();
 	void despawnEnemy(Enemy* enemy);
