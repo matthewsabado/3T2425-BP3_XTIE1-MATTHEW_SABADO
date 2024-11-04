@@ -42,15 +42,16 @@ private:
 	float currentPowerSpawnTimer;
 
 
-	bool isBossOnScreen;
+	bool isBossAlive;
 
 	void spawnEnemies();
 	void spawnPowers();
 
 	void spawnBoss();
-	void despawnBoss();
+	void despawnBoss(Boss* boss);
 	void despawnEnemy(Enemy* enemy);
 	void explodeEnemy(Enemy* enemy);
+	void explodeBoss(Boss* boss);
 	void explodePlayer();
 	void despawnPower(PowerUp* power);
 

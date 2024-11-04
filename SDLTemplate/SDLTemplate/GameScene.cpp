@@ -12,6 +12,7 @@ GameScene::GameScene()
 	currentPowerSpawnTimer = 1000;
 	spawnTime = 300;
 
+
 }
 
 GameScene::~GameScene()
@@ -29,9 +30,9 @@ void GameScene::start()
 
 	Scene::start();
 
-	points = 17; 
+	points = 0; 
 	isPowerOnScreen = false;
-	isBossOnScreen = false;
+	isBossAlive = false;
 
 
 	initFonts();
@@ -66,14 +67,15 @@ void GameScene::draw()
 		drawText(SCREEN_WIDTH / 2, 600, 255, 0, 0, TEXT_CENTER, "GAME OVER!");
 	}
 
-	if (isBossOnScreen == true)
+	if (isBossAlive == true)
 	{
-		drawText(150, 45, 255, 255, 255, TEXT_CENTER, "BOSS HP: %01d", spawnedBosses[0]->getBossHP());
+		drawText(110, 45, 255, 255, 255, TEXT_CENTER, "BOSS HP: %01d", spawnedBosses[0]->getBossHP());
 	}
 }
 
 void GameScene::update()
 {
+
 
 	Scene::update();
 	if (points >= 10)
@@ -131,9 +133,25 @@ void GameScene::spawnBoss()
 
 }
 
-void GameScene::despawnBoss()
+void GameScene::despawnBoss(Boss* boss)
 {
-	
+	int index = -1;
+	for (int i = 0; i < spawnedBosses.size(); i++)
+	{
+		//if the pointer matches
+		if (boss == spawnedBosses[i])
+		{
+			index = i;
+			break;
+		}
+	}
+
+	//if match is found
+	if (index != -1)
+	{
+		spawnedBosses.erase(spawnedBosses.begin() + index);
+		delete boss;
+	}
 }
 
 void GameScene::despawnEnemy(Enemy* enemy)
@@ -167,6 +185,16 @@ void GameScene::explodeEnemy(Enemy* enemy)
 	this->addGameObject(boom);
 	
 	
+}
+
+void GameScene::explodeBoss(Boss* boss)
+{
+	explosion* boom = new explosion();
+
+	//finds position of the boss
+	boom->setPosition(boss->getPositionX(), boss->getPositionY());
+	this->addGameObject(boom);
+
 }
 
 void GameScene::explodePlayer()
@@ -209,7 +237,7 @@ void GameScene::spawnLogic()
 	//enemy memory management
 	for (int i = 0; i < spawnedEnemies.size(); i++)
 	{
-		if (spawnedEnemies[i]->getPositionY() > SCREEN_HEIGHT + 60)
+		if (spawnedEnemies[i]->getPositionY() > SCREEN_HEIGHT + 60 || isBossAlive == true)
 		{
 			Enemy* eraseEnemy = spawnedEnemies[i];
 			spawnedEnemies.erase(spawnedEnemies.begin() + i);
@@ -220,7 +248,7 @@ void GameScene::spawnLogic()
 	}
 
 	//spawning logic to stop spawning enemies when boss is on screen
-	if (isBossOnScreen == false)
+	if (isBossAlive == false)
 	{
 		if (currentSpawnTimer > 0)
 		{
@@ -240,12 +268,18 @@ void GameScene::spawnLogic()
 	}
 	
 	//spawning boss logic
-	if (points >= 20 && isBossOnScreen == false)
+	if (points == 20 && isBossAlive == false)
 	{
-		isBossOnScreen = true;
+		isBossAlive = true;
 		spawnBoss();
 	}
 	
+	if (points == 50 && isBossAlive == false)
+	{
+		isBossAlive = true;
+		spawnBoss();
+	}
+
 	//powerspawn timer logic
 	if (currentPowerSpawnTimer > 0)
 	{
@@ -358,7 +392,7 @@ void GameScene::collisionLogic()
 			}
 
 			//If the bullet is coming from the player side, check against the boss
-			else if (bullet->getSide() == Side::PLAYER_SIDE)
+			if (bullet->getSide() == Side::PLAYER_SIDE)
 			{
 				for (int i = 0; i < spawnedBosses.size(); i++)
 				{
@@ -373,8 +407,14 @@ void GameScene::collisionLogic()
 					if (collision == 1)
 					{
 						currentBoss->takeDamage();
-
-						break;
+						if (currentBoss->getBossHP() <= 0)
+						{
+							isBossAlive = false;
+							explodeBoss(currentBoss);
+							despawnBoss(currentBoss);
+							points += 10;
+						}
+						
 					}
 				}
 			}

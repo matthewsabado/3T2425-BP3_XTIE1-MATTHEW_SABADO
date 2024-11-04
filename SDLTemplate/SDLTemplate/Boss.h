@@ -40,14 +40,15 @@ private:
     int height;
     int speed;
     int bossHealth;
-
+  
     float reloadTime;
     float currentReloadTime;
     float directionChangeTime;
     float currentDirectionChangeTime;
-  
-    bool isBossInPlace;
+    int firingPattern;
     bool isBossOnScreen;
+    int patternChangeTimer;
+    void changeFiringPatterns(int pattern);
 
     SDL_Texture* texture;
     Mix_Chunk* sound;
