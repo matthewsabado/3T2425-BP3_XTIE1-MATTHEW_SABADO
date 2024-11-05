@@ -68,16 +68,12 @@ void Boss::update()
 		currentReloadTime--;
 	}
 
-	
+	//for selecting firing patterns
 
 	if (currentReloadTime == 0 && y == 40 && playerTarget->getIsAlive())
 	{
 
 		changeFiringPatterns(firingPattern);
-		
-		
-		
-		
 		
 		currentReloadTime = reloadTime;
 		
@@ -85,9 +81,10 @@ void Boss::update()
 
 	patternChangeTimer--;
 
+	//for randomly switching firing pattern after timer is done
 	if (patternChangeTimer <= 0)
 	{
-		cout << "Current pattern: " << firingPattern << endl;
+		//cout << "Current pattern: " << firingPattern << endl;
 		firingPattern = rand() % 3;
 		patternChangeTimer = 300;
 	}

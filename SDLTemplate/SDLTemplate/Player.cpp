@@ -93,7 +93,7 @@ void Player::update()
 		currentSideReloadTime--;
 	}
 
-	if (app.keyboard[SDL_SCANCODE_F] && currentMainReloadTime == 0) 
+	if (app.keyboard[SDL_SCANCODE_F]) 
 	{
 		
 		

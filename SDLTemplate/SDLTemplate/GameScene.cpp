@@ -8,8 +8,8 @@ GameScene::GameScene()
 	this->addGameObject(player);
 
 	currentSpawnTimer = 300;
-	powerSpawnTime = 1000;
-	currentPowerSpawnTimer = 1000;
+	powerSpawnTime = 100;
+	currentPowerSpawnTimer = 1;
 	spawnTime = 300;
 
 
@@ -30,7 +30,7 @@ void GameScene::start()
 
 	Scene::start();
 
-	points = 0; 
+	points = 20; 
 	isPowerOnScreen = false;
 	isBossAlive = false;
 
@@ -321,8 +321,6 @@ void GameScene::collisionLogic()
 		if (power != NULL)
 		{
 			int collision = checkCollision(
-				player->getPositionX(), player->getPositionY(), player->getWidth(), player->getHeight(),
-				power->getPositionX(), power->getPositionY(), power->getWidth(), power->getHeight()
 
 			);
 
