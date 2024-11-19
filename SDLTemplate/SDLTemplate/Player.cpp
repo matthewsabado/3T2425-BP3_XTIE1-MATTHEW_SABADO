@@ -93,10 +93,10 @@ void Player::update()
 		currentSideReloadTime--;
 	}
 
-	if (app.keyboard[SDL_SCANCODE_F]) 
+	if (app.keyboard[SDL_SCANCODE_F] && currentMainReloadTime == 0)
 	{
 		
-		
+
 		SoundManager::playSound(sound);
 		Bullet* bullet = new Bullet(x - 5 + width / 2, y - 20 + height / 2, 0, -1, 10, Side::PLAYER_SIDE);
 		bullets.push_back(bullet);
@@ -115,6 +115,7 @@ void Player::update()
 		{
 			rapidFire();
 		}
+
 	}
 
 	//powerup timer

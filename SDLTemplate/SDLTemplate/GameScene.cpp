@@ -321,6 +321,8 @@ void GameScene::collisionLogic()
 		if (power != NULL)
 		{
 			int collision = checkCollision(
+				player->getPositionX(), player->getPositionY(), player->getWidth(), player->getHeight(),
+				power->getPositionX(), power->getPositionY(), power->getWidth(), power->getHeight()
 
 			);
 

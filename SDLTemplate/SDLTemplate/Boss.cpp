@@ -196,7 +196,7 @@ void Boss::changeFiringPatterns(int pattern)
 	//firing pattern 3: tracking
 	if (pattern == 2)
 	{
-		reloadTime = 30;
+		reloadTime = 20;
 		calcSlope(playerTarget->getPositionX(), playerTarget->getPositionY(), x, y, &dx, &dy);
 		SoundManager::playSound(sound);
 		Bullet* bullet = new Bullet(x + 3 + width / 2, y - 3 + height / 2, dx, dy, 10, Side::ENEMY_SIDE);
