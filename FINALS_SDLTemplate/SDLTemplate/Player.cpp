@@ -1,47 +1,48 @@
 #include "Player.h"
+using namespace std;
 
 void Player::start()
-{   
+{
 	x = SCREEN_WIDTH / 2 - 24;
 	y = 750;
 	texture = loadTexture("gfx/player.png");
 	speed = 10;
 	maximumJumpHeight = y - jumpPower;
-	characterVelocity = 0;
+	velocity = 0;
+	maxVelocity = 15;
 
 	dashDuration = 0;
 	dashCooldown = 100;
 	dashSpeed = 24;
+
 	isGrounded = false;
 	isDashing = false;
 	isDashPressed = false;
 	isDashCooldown = false;
-
+	isDashSFX = false;
 	isAlive = true;
 
 	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
+
+	jumpSFX = SoundManager::loadSound("sound/jump.mp3");
+	dash = SoundManager::loadSound("sound/dash.wav");
 }
 
 void Player::update()
 {
+
+	/*cout << "Current X: " << x << endl;
+	cout << "Current Y: " << y << endl;
+	cout << "Current Velocity: " << velocity << endl;
+	system("cls");*/
+
 	applyGravity();
 
 	if (!isAlive) return;
 
-	if (app.keyboard[SDL_SCANCODE_UP] && app.keyboard[SDL_SCANCODE_X] && !isDashPressed && isDashCooldown == false)
+	if (isGrounded)
 	{
-		isDashCooldown = true;
-		isDashing = true;
-		dashDuration = 4;
-		isDashPressed = true;
-	}
-
-	if (app.keyboard[SDL_SCANCODE_DOWN] && app.keyboard[SDL_SCANCODE_X] && !isDashPressed && isDashCooldown == false)
-	{
-		isDashCooldown = true;
-		isDashing = true;
-		dashDuration = 7;
-		isDashPressed = true;
+		hasJumped = false;
 	}
 
 	if (app.keyboard[SDL_SCANCODE_LEFT])
@@ -71,6 +72,8 @@ void Player::update()
 		}
 	}
 
+
+
 	if (app.keyboard[SDL_SCANCODE_C])
 	{
 		jump();
@@ -79,6 +82,13 @@ void Player::update()
 
 	if (isDashing)
 	{
+		if (!isDashSFX)
+		{
+			SoundManager::playSound(dash);
+			dash->volume = 10;
+			isDashSFX = true;
+		}
+		
 		if (app.keyboard[SDL_SCANCODE_RIGHT])
 		{
 			x += dashSpeed;
@@ -89,18 +99,13 @@ void Player::update()
 			x -= dashSpeed;
 		}
 
-		if (app.keyboard[SDL_SCANCODE_UP])
-		{
-			y -= dashSpeed;
-		}
-
-		if (app.keyboard[SDL_SCANCODE_DOWN])
-		{
-			y += dashSpeed;
-		}
-
 		dashDuration--;
 
+	}
+
+	else
+	{
+		isDashSFX = false;
 	}
 
 
@@ -117,12 +122,11 @@ void Player::update()
 		isDashPressed = false;
 	}
 
-
-
 	//dash cooldown
 	if (isDashCooldown)
 	{
 		dashCooldown--;
+
 		if (dashCooldown <= 0)
 		{
 			isDashCooldown = false;
@@ -134,7 +138,7 @@ void Player::update()
 	if (y > 703)
 	{
 		isGrounded = true;
-		characterVelocity = 0;
+		velocity = 0;
 		y = 703;
 	}
 
@@ -158,6 +162,7 @@ void Player::update()
 
 void Player::draw()
 {
+	if (!isAlive) return;
 	blit(texture, x, y);
 }
 
@@ -183,7 +188,7 @@ int Player::getHeight()
 
 int Player::getVelocity()
 {
-	return this -> characterVelocity;
+	return this->velocity;
 }
 
 bool Player::getIsGrounded()
@@ -209,11 +214,16 @@ void Player::setPositionY(int posY)
 
 void Player::setVelocity(int newVel)
 {
-	characterVelocity = newVel;
+	velocity = newVel;
 }
 
 void Player::setIsGrounded(bool grounded)
 {
+	if (grounded)
+	{
+		velocity = 0;
+	}
+
 	isGrounded = grounded;
 }
 
@@ -221,19 +231,42 @@ void Player::applyGravity()
 {
 	if (!isGrounded && !isDashing)
 	{
-		characterVelocity += gravity / 2;
+		velocity += gravity / 2;
+
+		if (velocity > maxVelocity)
+		{
+			velocity = maxVelocity;
+		}
 	}
 
-	y += characterVelocity;
+	y += velocity;
 }
 
 void Player::jump()
 {
-	if (isGrounded && isDashing == false)
+	
+	if (isGrounded && isDashing == false && !hasJumped)
 	{
-		characterVelocity = -jumpPower;
+		SoundManager::playSound(jumpSFX);
+		jumpSFX->volume = 10;
+		velocity = -jumpPower;
 		isGrounded = false;
 
 	}
+}
+
+void Player::revive()
+{
+	isAlive = true;
+}
+
+void Player::die()
+{
+	isAlive = false;
+}
+
+bool Player::getDashCooldown()
+{
+	return isDashCooldown;
 }
 

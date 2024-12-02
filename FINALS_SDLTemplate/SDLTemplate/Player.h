@@ -2,6 +2,8 @@
 #include "GameObject.h"
 #include "draw.h"
 #include "common.h"
+#include "SoundManager.h"
+
 class Player : public GameObject
 {
 public:
@@ -26,21 +28,30 @@ public:
 	void applyGravity();
 	void jump();
 
+	void revive();
+	void die();
+
+	bool getDashCooldown();
+
 private:
 	int x;
 	int y;
 	int width;
 	int height;
 	bool isAlive;
+	bool isDashSFX;
 
 	//movement variables
-	const float jumpPower = 24.3f;
+	const float jumpPower = 20.3f;
 	int maximumJumpHeight;
 	int jumpTracker;
 	const float gravity = 3.8f;
-	int characterVelocity;
+	int velocity;
+	int maxVelocity;
 	int speed;
 	int isGrounded;
+	int dashCooldown;
+	bool hasJumped;
 
 	//dash
 	bool isDashCooldown;
@@ -48,10 +59,10 @@ private:
 	bool isDashing;
 	int dashSpeed;
 	int dashDuration;
-	int dashCooldown;
 
-	
 
+	Mix_Chunk* jumpSFX;
+	Mix_Chunk* dash;
 	SDL_Texture* texture;
 };
 

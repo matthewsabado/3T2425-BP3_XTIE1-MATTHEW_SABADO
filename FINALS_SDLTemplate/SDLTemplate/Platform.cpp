@@ -39,6 +39,6 @@ int Platform::getHeight()
 
 void Platform::spawn(int posX, int posY)
 {
-	x = posX;
-	y = posY;
+	this->x = posX;
+	this->y = posY;
 }

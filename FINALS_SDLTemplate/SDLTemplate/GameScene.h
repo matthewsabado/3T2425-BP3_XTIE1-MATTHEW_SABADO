@@ -5,6 +5,12 @@
 #include "Platform.h"
 #include "util.h"
 #include "obstacles.h"
+#include "deathExplosion.h"
+#include "SDL_mixer.h"
+#include "text.h"
+#include "gem.h"
+#include "wormhole.h"
+
 using namespace std;
 
 class GameScene : public Scene
@@ -16,17 +22,32 @@ public:
 	void draw();
 	void update();
 
-	void collisionLogic();
-
 private:
+	int level;
+	int width;
+	int height;
+	int textTimer;
+	bool isWin;
 
 	Player* player;
 	Platform* platform;
 	obstacles* spikyball;
-	obstacles* spikes;
+
+	gem* gemObj;
+	wormhole* wormObj;
 
 	vector<obstacles*> spikyballs;
 	vector<Platform*> platforms;
 
+	void loadLevel(int currentLevel);
+	void collisionLogic();
+	void playerBoom();
+	void restartGame();
+
+
+	SDL_Texture* background;
+
+	Mix_Chunk* gemSFX;
+	Mix_Chunk* wormholeSFX;
 };
 

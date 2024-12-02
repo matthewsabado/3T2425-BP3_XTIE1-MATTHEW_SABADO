@@ -26,6 +26,7 @@
     <ClCompile Include="init.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="gem.cpp" />
     <ClCompile Include="obstacles.cpp" />
     <ClCompile Include="Platform.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -33,6 +34,7 @@
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="text.cpp" />
     <ClCompile Include="util.cpp" />
+    <ClCompile Include="wormhole.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="app.h" />
@@ -45,6 +47,7 @@
     <ClInclude Include="init.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="gem.h" />
     <ClInclude Include="obstacles.h" />
     <ClInclude Include="Platform.h" />
     <ClInclude Include="Player.h" />
@@ -52,6 +55,7 @@
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="text.h" />
     <ClInclude Include="util.h" />
+    <ClInclude Include="wormhole.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

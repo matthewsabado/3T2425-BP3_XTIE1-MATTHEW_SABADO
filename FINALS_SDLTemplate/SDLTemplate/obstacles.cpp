@@ -41,3 +41,4 @@ void obstacles::spawn(int posX, int posY)
 	x = posX;
 	y = posY;
 }
+

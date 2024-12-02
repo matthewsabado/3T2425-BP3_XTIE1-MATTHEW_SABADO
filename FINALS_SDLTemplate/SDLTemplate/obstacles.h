@@ -23,6 +23,7 @@ private:
 	int y;
 	int width;
 	int height;
+	int speed;
 
 	SDL_Texture* texture;
 
